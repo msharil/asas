@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Index</title>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--
+<link href="css/jquery.mobile.min.css" rel="stylesheet" type="text/css">
+<link href="css/extra.css" rel="stylesheet" type="text/css">
+-->
+<link href="css/style.min.css" rel="stylesheet" type="text/css">
+<link href="css/jquery.mobile.icons.min.css" rel="stylesheet" type="text/css">
+<link href="css/jquery.mobile.structure.min.css" rel="stylesheet" type="text/css">
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.mobile.min.js"></script>
+
+</head>
+
+<body>
+<!-- Page 1 -->
+<div data-role="page" id="page1">
+  
+  <!--content -->
+  <div role="main" class="ui-content">
+  <center>
+	<h2>Selamat Datang</h2>	
+	<img src="images/logo.jpg" />
+
+	<h3>Web Mobile Rasmi MARA</h3>
+	
+	<a href="#page2" class="ui-btn">Masuk</a>
+	<a href="#" class="ui-btn">Bantuan</a>
+	</center>
+  </div>
+  
+</div><!-- End of Page1 -->
+
+<!-- Page 2 [Menu] -->
+<div data-role="page" id="page2">
+  
+	<!--header -->
+  <div data-role="header" data-position="fixed" data-add-back-btn="true" data-back-btn-text="Kembali">	
+	<h3>Pengenalan</h3>		
+  </div>
+  
+  <!--content -->
+  <div role="main" class="ui-content">
+	<ul data-role="listview" data-inset="true" data-filter="true" data-input="#filter-for-listview">
+		<li><a href="#page3">Pengenalan</a></li>
+		<li><a href="#page4">Organisasi</a></li>
+		<li><a href="#objektif">Objektif</a></li>
+		<li><a href="#page5">Direktori</a></li>
+		<!--<li><a href="#page6">Direktori (Pop up)</a></li>-->
+	</ul>		
+  </div>  
+  
+  <!--footer -->
+  <div data-role="footer" data-position="fixed">
+    <div data-role="navbar">
+        <ul>
+            <li><a href="#page1" data-icon="home">Home</a></li>
+            <li><a href="#page2" data-icon="grid" class="ui-btn-active ui-state-persist">Menu</a></li>
+            <li><a href="#page5" data-icon="gear">Directory</a></li>
+        </ul>
+    </div><!-- /navbar -->
+  </div><!-- /Footer -->
+  
+</div><!-- End of Page2 -->
+
+<!-- Page 3 [Pengenalan] -->
+<div data-role="page" id="page3">
+	<!--panel -->
+  <div data-role="panel" id="panel1" data-display="reveal">
+	<ul data-role="listview">
+		<li><a href="#page2">Menu</a></li>
+		<li><a href="#page4">Organisasi</a></li>
+		<li><a href="#objektif">Objektif</a></li>
+		<li><a href="#page5">Direktori</a></li>
+		<li><a href="btm.html">BTM</a></li>
+	</ul>
+  </div>
+
+  <!--header -->
+  <div data-role="header" data-position="fixed" data-add-back-btn="true" data-back-btn-text="Kembali">
+	<a href="#panel1" data-icon="bars" data-iconpos="notext">Menu</a>
+	<h3>Pengenalan</h3>		
+  </div>
+  
+  <!--content -->
+  <div role="main" class="ui-content">
+	Sebuah agensi <strong>Kementerian Kemajuan Luar Bandar Dan Wilayah</strong>, ditubuhkan pada <strong>1 Mac 1966</strong> di bawah Akta Parlimen sebagai sebuah badan berkanun hasil daripada resolusi Kongres Ekonomi Bumiputera pertama pada tahun sebelumnya.
+	<br />
+	<img src="images/medan_mara.jpg" /><br />
+	Adalah menjadi kewajipan Majlis bagi memajukan, menggalakkan,memudahkan serta menjalankan pembangunan ekonomi dan kemasyarakatan dalam persekutuan dan khususnya dalam kawasan-kawasan luar bandar.<br />
+	
+</div>
+  
+  <!--footer -->
+  <div data-role="footer" data-position="fixed">
+    <div data-role="navbar">
+        <ul>
+            <li><a href="#page1" data-icon="home">Home</a></li>
+            <li><a href="#page2" data-icon="grid" class="ui-btn-active ui-state-persist">Menu</a></li>
+            <li><a href="#page5" data-icon="gear">Directory</a></li>
+        </ul>
+    </div><!-- /navbar -->
+  </div><!-- /Footer -->
+
+</div><!-- End of Page3 -->
+
+<!-- Page 4 [Organisasi] -->
+<div data-role="page" id="page4">
+	<!--header -->
+  <div data-role="header" data-position="fixed" data-add-back-btn="true" data-back-btn-text="Kembali">
+	<h3>Organisasi</h3>		
+		
+  </div>
+  
+  <!--content -->
+  <div role="main" class="ui-content">
+	<ul data-role="listview">
+		<li>Ibu Pejabat</li>
+		<li>Pejabat MARA Negeri</li>
+		<li>Pejabat MARA Daerah</li>
+		<li>MRSM</li>
+		<li>Kolej MARA</li>
+		<li>GIATMARA</li>
+		<li>IKM</li>
+		<li>Institut Kemahiran Tertinggi MARA</li>
+		<li>MARALiner Sdn. Bhd</li>
+		<li>Pejabat MARA Luar Negara</li>
+		<li>Kolej Profesional MARA</li>
+	</ul>
+
+	<br />
+	<a href="#popAddr" data-rel="popup" data-position-to="window" data-transition="pop" class="ui-btn ui-corner-all ui-shadow ui-btn-inline">IbuPejabat</a>
+	<div data-role="popup" id="popAddr" data-overlay-theme="b" data-theme="b" data-dismissible="false" style="max-width:400px;">
+		<div data-role="header" data-theme="a">
+		<h1>Alamat</h1>
+		</div>
+		<div role="main" class="ui-content">
+		<h3 class="ui-title">Ibu Pejabat</h3>
+
+		MAJLIS AMANAH RAKYAT (MARA), <br />
+		Ibu Pejabat MARA 21, <br />
+		Jalan Raja Laut, <br />
+		50609 Kuala Lumpur <br />
+		
+		<a href="tel:+60326132300" class="ui-btn ui-icon-phone ui-btn-icon-notext ui-corner-all ui-btn-inline"></a> 
+		<a href="mailto:rozinah@mara.gov.my" class="ui-btn ui-icon-mail ui-btn-icon-notext ui-corner-all ui-btn-inline"></a> <br />
+		
+		<a href="#page3" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back">Kembali</a>
+		<a href="#page2" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-transition="slideup">Seterusnya</a>
+		</div>
+	</div>
+			
+  </div>
+
+  <!--footer -->
+  <div data-role="footer" data-position="fixed">
+    <div data-role="navbar">
+        <ul>
+            <li><a href="#" data-icon="home">Home</a></li>
+            <li><a href="#" data-icon="grid" class="ui-btn-active ui-state-persist">Menu</a></li>
+            <li><a href="#" data-icon="gear">Directory</a></li>
+        </ul>
+    </div><!-- /navbar -->
+  </div><!-- /Footer -->
+  
+</div><!-- End of Page3 -->
+  
+<!-- Page 5 [Direktori] -->
+<div data-role="page" id="page5">
+	<!--header -->
+  <div data-role="header" data-position="fixed" data-add-back-btn="true" data-back-btn-text="Kembali">
+	<h3>OSA</h3>		
+  </div>
+  
+  <!--content -->
+  <div role="main" class="ui-content">
+  <h3>Senarai Pegawai</h3>
+	<ul data-role="listview" data-inset="true" data-filter="true" data-filter-placeholder="Carian..">
+		<li>
+		<img src="images/rozinah.jpg" width="150">
+		<h3>Pn. Rozinah Abdullah</h3>
+		<p>
+		<a href="tel:+60122236905" class="ui-btn ui-icon-phone ui-btn-icon-notext ui-corner-all ui-btn-inline"></a> 
+		<a href="sms://+60122236905" class="ui-btn ui-icon-comment ui-btn-icon-notext ui-corner-all ui-btn-inline"></a> 
+		<a href="mailto:rozinah@mara.gov.my" class="ui-btn ui-icon-mail ui-btn-icon-notext ui-corner-all ui-btn-inline"></a> 
+		</p>
+		</li>
+		<li>
+		<img src="images/bun.png" width="150">
+		<h3>En. Bunyamin Ab. Raup</h3>
+		<p>
+		<a href="tel:+60196973589" class="ui-btn ui-icon-phone ui-btn-icon-notext ui-corner-all ui-btn-inline"></a> 
+		<a href="sms://+60196973589" class="ui-btn ui-icon-comment ui-btn-icon-notext ui-corner-all ui-btn-inline"></a> 
+		<a href="mailto:bunyamin@mara.gov.my" class="ui-btn ui-icon-mail ui-btn-icon-notext ui-corner-all ui-btn-inline"></a> 
+		</p>
+		</li>
+		<li>
+		<img src="images/msharil.jpg" width="150">
+		<h3>En. Mohd Sharil</h3>
+		<p>
+		<a href="tel:+60135928812" class="ui-btn ui-icon-phone ui-btn-icon-notext ui-corner-all ui-btn-inline"></a> 
+		<a href="sms://+60135928812" class="ui-btn ui-icon-comment ui-btn-icon-notext ui-corner-all ui-btn-inline"></a> 
+		<a href="mailto:msharil@mara.gov.my" class="ui-btn ui-icon-mail ui-btn-icon-notext ui-corner-all ui-btn-inline"></a> 
+		</p>
+		</li>
+		<li>
+		<img src="images/ahmad.png" width="150">
+		<h3>En. Ahmad Fizry</h3>
+		<p>
+		<a href="tel:+60122236905" class="ui-btn ui-icon-phone ui-btn-icon-notext ui-corner-all ui-btn-inline"></a> 
+		<a href="sms://+60122236905" class="ui-btn ui-icon-comment ui-btn-icon-notext ui-corner-all ui-btn-inline"></a> 
+		<a href="mailto:afizry@mara.gov.my" class="ui-btn ui-icon-mail ui-btn-icon-notext ui-corner-all ui-btn-inline"></a> 
+		</p>
+		</li>
+	</ul>
+		
+  </div>
+
+  <!--footer -->
+  <div data-role="footer" >
+    <div data-role="navbar">
+        <ul>
+            <li><a href="#page1" data-icon="home">Home</a></li>
+            <li><a href="#page2" data-icon="grid">Menu</a></li>
+            <li><a href="#page5" data-icon="gear" class="ui-btn-active ui-state-persist">Directory</a></li>
+        </ul>
+    </div><!-- /navbar -->
+  </div><!-- /Footer -->
+  
+</div>
+
+<!-- Page 6 [Direktori Pop Up] -->
+<div data-role="page" id="page6">
+	<!--header -->
+  <div data-role="header" data-position="fixed" data-add-back-btn="true" data-back-btn-text="Kembali">
+	<h3>Page Base</h3>		
+  </div>
+  
+  <!--content -->
+  <div role="main" class="ui-content">
+  
+  <div data-role="popup" id="dRozinah">
+		<p>
+		<a href="tel:+60122236905" class="ui-btn ui-icon-phone ui-btn-icon-notext ui-corner-all ui-btn-inline"></a> 
+		<a href="sms://+60122236905" class="ui-btn ui-icon-comment ui-btn-icon-notext ui-corner-all ui-btn-inline"></a> 
+		<a href="mailto:rozinah@mara.gov.my" class="ui-btn ui-icon-mail ui-btn-icon-notext ui-corner-all ui-btn-inline"></a> 
+		</p>
+	</div>
+  <div data-role="popup" id="dBun">
+		<p>
+		<a href="tel:+60196973589" class="ui-btn ui-icon-phone ui-btn-icon-notext ui-corner-all ui-btn-inline"></a> 
+		<a href="sms://+60196973589" class="ui-btn ui-icon-comment ui-btn-icon-notext ui-corner-all ui-btn-inline"></a> 
+		<a href="mailto:bunyamin@mara.gov.my" class="ui-btn ui-icon-mail ui-btn-icon-notext ui-corner-all ui-btn-inline"></a> 
+		</p>
+  </div>
+  <div data-role="popup" id="dSharil">
+		<p>
+		<a href="tel:+60135928812" class="ui-btn ui-icon-phone ui-btn-icon-notext ui-corner-all ui-btn-inline"></a> 
+		<a href="sms://+60135928812" class="ui-btn ui-icon-comment ui-btn-icon-notext ui-corner-all ui-btn-inline"></a> 
+		<a href="mailto:msharil@mara.gov.my" class="ui-btn ui-icon-mail ui-btn-icon-notext ui-corner-all ui-btn-inline"></a> 
+		</p>
+  </div>
+  <div data-role="popup" id="dFizry">
+		<p>
+		<a href="tel:+60122236905" class="ui-btn ui-icon-phone ui-btn-icon-notext ui-corner-all ui-btn-inline"></a> 
+		<a href="sms://+60122236905" class="ui-btn ui-icon-comment ui-btn-icon-notext ui-corner-all ui-btn-inline"></a> 
+		<a href="mailto:afizry@mara.gov.my" class="ui-btn ui-icon-mail ui-btn-icon-notext ui-corner-all ui-btn-inline"></a> 
+		</p>
+  </div>
+  <h3>Senarai Pegawai</h3>
+	<ul data-role="listview" data-filter="true" data-filter-placeholder="Carian..">
+		<li>
+		<a href="#dRozinah" data-rel="popup" data-transition="slideup">
+		<img src="images/rozinah.jpg" width="150">
+		<h3>Pn. Rozinah Abdullah</h3>
+		<p>Cawangan OSA</p></a>
+		</li>
+		<li><a href="#dBun" data-rel="popup" data-transition="slideup">
+		<img src="images/bun.png" width="150">
+		<h3>En. Bunnyamin Ab. Raup</h3>
+		<p>Cawangan OSA</p></a>
+		</li>
+		<li><a href="#dSharil" data-rel="popup" data-transition="slideup">
+		<img src="images/msharil.jpg" width="150">
+		<h3>En. Mohd Sharil</h3>
+		<p>Cawangan OSA</p></a>
+		</li>
+		<li><a href="#dFizry" data-rel="popup" data-transition="slideup">
+		<img src="images/ahmad.png" width="150">
+		<h3>En. Ahmad Fizry</h3>
+		<p>Cawangan OSA</p></a>
+		</li>
+	</ul>
+	
+  </div>
+  
+  <!--footer -->
+  <div data-role="footer" data-position="fixed">
+    <div data-role="navbar">
+        <ul>
+            <li><a href="#" data-icon="home">Home</a></li>
+            <li><a href="#" data-icon="grid" class="ui-btn-active ui-state-persist">Menu</a></li>
+            <li><a href="#" data-icon="gear">Directory</a></li>
+        </ul>
+    </div><!-- /navbar -->
+  </div><!-- /Footer -->
+
+</div><!-- End of Page6 -->
+
+<!-- Page [Objektif] -->
+<div data-role="page" id="objektif">
+	<!--header -->
+  <div data-role="header" data-position="fixed" data-add-back-btn="true" data-back-btn-text="Kembali">
+	<h3>Objektif</h3>		
+  </div>
+  
+  <!--content -->
+  <div role="main" class="ui-content">
+  <center>
+  <img src="images/objective.jpg">
+  </center>
+  
+	<div data-role="collapsible-set">
+		<div data-role="collapsible" data-collapsed="false" data-theme="a" data-content-theme="a">
+			<h2>Visi Korporat</h2>
+			<p>Menjadi organisasi amanah yang unggul dan diberkati untuk mengangkat martabat bangsa</p>
+		</div>	
+		<div data-role="collapsible" data-theme="b" data-content-theme="b">
+			<h2>Misi Korporat</h2>
+			<p>Menerajui bidang keusahawanan, pendidikan dan pelaburan untuk penguasaan ekuiti Bumiputera</p>
+		</div>	
+		<div data-role="collapsible" data-theme="c" data-content-theme="c">
+			<h2>Objektif</h2>
+			<p>Membangunkan usahawan berjaya dan inovatif</p>
+			<p>Melahirkan modal insan global dan berintegriti</p>
+			<p>Menyumbang kepada pemilikan ekuiti</p>
+			<p>Memudahkan sistem penyampaian</p>
+		</div>
+		<div data-role="collapsible">
+			<h2>Strategi</h2>
+			<ul data-role="listview">
+				<li>i-Usahawan</li>
+				<li>i-Pekerja</li>
+				<li>i-Pelaburan</li>
+				<li>i-Organisasi</li>
+			<ul>
+		</div>	
+	</div>
+		
+  </div>  
+  
+  <!--footer -->
+  <div data-role="footer" data-position="fixed">
+    <div data-role="navbar">
+        <ul>
+            <li><a href="#" data-icon="home">Home</a></li>
+            <li><a href="#" data-icon="grid" class="ui-btn-active ui-state-persist">Menu</a></li>
+            <li><a href="#" data-icon="gear">Directory</a></li>
+        </ul>
+    </div><!-- /navbar -->
+  </div><!-- /Footer -->
+
+  </div>
+  </div>
+</div><!-- End of Page [Objektif] -->
+
+<!-- Page [Base] -->
+<div data-role="page" id="base">
+	<!--header -->
+  <div data-role="header" data-position="fixed" data-add-back-btn="true" data-back-btn-text="Kembali">
+	<h3>Page Base</h3>		
+  </div>
+  
+  <!--content -->
+  <div role="main" class="ui-content">
+		
+  </div>
+  
+  
+  <!--footer -->
+  <div data-role="footer" data-position="fixed">
+    <h3>Web Mobile Rasmi MARA</h3>
+  </div>
+
+</div><!-- End of Page [Base] -->
+</body>
+</html>
