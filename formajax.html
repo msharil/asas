@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Try Ajax</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+  p {
+    color: red;
+  }
+  </style>
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  <script>
+ 
+  $( document ).ready(function() {
+  //Pengiraan menggunakan ajax
+    $('#hantar').click(function(){
+		$.ajax({
+		type: 'POST',
+		url: 'formajax.php',
+		data: $("#form1").serialize(),
+		success: function(data){
+			$('#try_ajax').html(data);
+			$('#try_ajax').show();
+			}
+		});
+	});
+  });
+ 
+  </script>
+<script src="js/jquery.min.js"></script>
+
+</head>
+
+<body>
+
+<form id="form1">
+<table>
+<tr>
+	<td>Name</td><td><input type="text" name="name"></td>
+</tr>
+<tr>
+	<td>Variable 1</td><td><input type="number" name="v1"></td>
+</tr>
+<tr>
+	<td>Variable 2</td><td><input type="number" name="v2"></td>
+</tr>
+<tr>
+	<!--<td>Total</td><td><input type="number" name="total"></td>-->
+	<td colspan="2"><input type="button" id="hantar" name="hantar" value="Kira"></td>
+</tr>
+</table><br />
+
+<div id="try_ajax" style="display: none">
+	HASIL DI SINI
+</div>
+
+</form>
+
+</body>
+</html>
+
