@@ -9,23 +9,23 @@
 
 <script src="js/jquery.min.js"></script>
 <script src="js/jquery.mobile.min.js"></script>
-<script> 
+<script>
+ 
   $( document ).bind("pageinit",function() { //Utk mobile
-  //Pengiraan menggunakan ajax
+  //Pengiraan menggunakan jQuery	
     $('#hantar').click(function(){
-		$.ajax({
-		type: 'POST',
-		url: 'formajax.php',
-		data: $("#form1").serialize(),
-		success: function(data){
-			$('#try_ajax').html(data);
-			$('#try_ajax').show();
-			}
-		});
+		var name = $('#name').val();
+		var v1 = $('#v1').val();
+		var v2 = $('#v2').val();
+		var v3 = parseInt(v1) + parseInt(v2);
+		
+		var data = 'Jumlah : ' + v3;
+		$('#ubah').html(data);
+		$('#try_ajax').popup('open');<!-- Popup Dialog Result -->
 	});
   });
  
-</script>
+  </script>
 <script src="js/jquery.min.js"></script>
 
 </head>
@@ -43,34 +43,44 @@
   <!--content -->
   <div role="main" class="ui-content">
 
-<form id="form1">
+	<form id="form1">
 	<div data-role="fieldcontain">
 		<label>Name :</label>
-		<input type="text" name="name" id="name" class="">
+		<input type="text" name="name" id="name">
 	</div>
 	<div data-role="fieldcontain">
 		<label>No. 1</label>
-		<input type="number" name="v1" id="v1" class="">
+		<input type="number" name="v1" id="v1">
 	</div>
 	<div data-role="fieldcontain">
 		<label>No. 2</label>
-		<input type="number" name="v2" id="v2" class="">
+		<input type="number" name="v2" id="v2">
 	</div>
-	<input type="button" id="hantar" name="hantar" value="Kira" class="ui-btn">
+	
+	<input type="button" id="hantar" value="Kira" class="ui-btn">
+	</form>
 
-<div id="try_ajax" style="display: none">
-	HASIL DI SINI
-</div>
+	<!-- Dialog -->
+	<div id="try_ajax" data-role="popup" data-dismissible="false" style="max-width:400px;">
+		<div data-role="header">
+		<h3>Result</h3>
+		</div>
+		<div role="main" class="ui-content">
+			<div id="ubah">
+				html(data) kat sini
+			</div>		
+			<a href="#" class="ui-btn ui-corner-all" data-rel="back" data-transition="flow">Kembali</a>
+		</div>
+	</div><!-- End Dialog -->
 
-</form>
-
-
-</div>
-
+  </div>
+  
   <!--footer -->
   <div data-role="footer" data-position="fixed">
     <h3>Operation</h3>
   </div>
+
+</div>
 
 </body>
 </html>

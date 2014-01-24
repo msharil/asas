@@ -9,23 +9,23 @@
 
 <script src="js/jquery.min.js"></script>
 <script src="js/jquery.mobile.min.js"></script>
-<script> 
+<script>
+ 
   $( document ).bind("pageinit",function() { //Utk mobile
-  //Pengiraan menggunakan ajax
+  //Pengiraan menggunakan jQuery	
     $('#hantar').click(function(){
-		$.ajax({
-		type: 'POST',
-		url: 'formajax.php',
-		data: $("#form1").serialize(),
-		success: function(data){
-			$('#try_ajax').html(data);
-			$('#try_ajax').show();
-			}
-		});
+		var name = $('#name').val();
+		var v1 = $('#v1').val();
+		var v2 = $('#v2').val();
+		var v3 = parseInt(v1) + parseInt(v2);
+		
+		var data = 'Jumlah : ' + v3;
+		$('#try_ajax').html(data);
+		$('#try_ajax').show();
 	});
   });
  
-</script>
+  </script>
 <script src="js/jquery.min.js"></script>
 
 </head>
@@ -43,7 +43,7 @@
   <!--content -->
   <div role="main" class="ui-content">
 
-<form id="form1">
+	<form id="form1">
 	<div data-role="fieldcontain">
 		<label>Name :</label>
 		<input type="text" name="name" id="name" class="">
@@ -56,21 +56,23 @@
 		<label>No. 2</label>
 		<input type="number" name="v2" id="v2" class="">
 	</div>
+	
 	<input type="button" id="hantar" name="hantar" value="Kira" class="ui-btn">
 
-<div id="try_ajax" style="display: none">
-	HASIL DI SINI
-</div>
+	<div id="try_ajax" style="display: none">
+		HASIL DI SINI
+	</div>
 
-</form>
+	</form>
 
-
-</div>
-
+  </div>
+  
   <!--footer -->
   <div data-role="footer" data-position="fixed">
     <h3>Operation</h3>
   </div>
+
+</div>
 
 </body>
 </html>

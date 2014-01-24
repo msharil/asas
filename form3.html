@@ -1,4 +1,4 @@
-<!-- Mobile form submitted using AJAX method -->
+<!-- Mobile form submitted using ajax method -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,17 +13,36 @@
 
 <script> 
   $( document ).bind("pageinit",function() { //Utk mobile
-  //Paparan menggunakan ajax
+  //Pengiraan menggunakan jQuery	
     $('#hantar').click(function(){
-		$.ajax({
-		type: 'POST',
-		url: 'form2.php',
-		data: $("#form1").serialize(),
-		success: function(data){
-			$('#try_ajax').html(data);
-			$('#try_ajax').show();
-			}
-		});
+		var nogaji = $('#nogaji').val();
+		var name = $('#name').val();
+		var rbSex = $('input:radio[name=rbSex]:checked').val()
+		var tkhlahir = $('#tkhlahir').val();
+		
+		var cbEducation = $('#cbPendidikan').val();
+		var cbUsahawan = $('#cbUsahawan').val();
+		var cbPelaburan = $('#cbPelaburan').val();
+		var cbkhidmatPengurusan = $('#cbkhidmatPengurusan').val();
+
+		var selBhgn = $('#selBhgn').val();
+		var skill = $('#skill').val();
+		
+		var v3 = nogaji + name;
+		
+		var data = 'No. Gaji : ' + nogaji + '<br />Nama : ' + name +
+				'<br />Jantina : ' + rbSex +
+				'<br />Tarikh lahir : ' + tkhlahir +
+				'<br />Sektor : ' + cbEducation + 
+				//'<br />Sektor : ' + cbUsahawan + 
+				//'<br />Sektor : ' + cbPelaburan + 
+				//'<br />Sektor : ' + cbkhidmatPengurusan + 
+				//'<br />Bahagian : ' + selBhgn +
+				'<br />Skil : ' + skill;
+			
+		$('#ubah').html(data);
+		//$('#try_ajax').show();
+		$('#try_ajax').show('open');
 	});
   });
  
@@ -65,20 +84,20 @@
 	</div>
 	<div data-role="ui-field-contain">
 	<label for="date">Tarikh Lahir:</label>
-	<input type="date" name="tkhlahir" id="date" value="">
+	<input type="date" name="tkhlahir" id="tkhlahir" value="">
 	</div>
 	<div data-role="ui-field-contain">
 	<fieldset data-role="controlgroup">
-    <legend>Sektor:</legend>
-        <input type="radio" name="rbSektor" id="rbPendidikan" value="Pendidikan" checked="checked">
-        <label for="rbPendidikan">Pendidikan</label>
-        <input type="radio" name="rbSektor" id="rbUsahawan" value="Usahawan">
-        <label for="rbUsahawan">Usahawan</label>
-        <input type="radio" name="rbSektor" id="rbInvestment" value="Pelaburan">
-        <label for="rbInvestment">Pelaburan</label>
-        <input type="radio" name="rbSektor" id="rbKP" value="Khidmat Pengurusan">
-        <label for="rbKP">Khidmat Pengurusan</label>
-	</fieldset>
+		<legend>Sektor:</legend>
+		<input type="checkbox" name="cbPendidikan" id="cbPendidikan" value="Pendidikan" checked="">
+		<label for="cbPendidikan">Pendidikan</label>
+		<input type="checkbox" name="cbUsahawan" id="cbUsahawan" value="Usahawan">
+		<label for="cbUsahawan">Usahawan</label>
+		<input type="checkbox" name="cbPelaburan" id="cbPelaburan" value="Pelaburan">
+		<label for="cbPelaburan">Pelaburan</label>
+		<input type="checkbox" name="cbkhidmatPengurusan" id="cbkhidmatPengurusan" value="Khidmat Pengurusan">
+		<label for="cbkhidmatPengurusan">Khidmat Pengurusan</label>
+	</fieldset>	
 	</div>
 	<div data-role="ui-field-contain">
 	<label for="selBhgn" class="select">Bahagian:</label>
@@ -96,9 +115,23 @@
 	
 	<input type="button" id="hantar" name="hantar" value="Hantar" class="ui-btn">
 
-<div id="try_ajax" style="display: none">
+<!--<div id="try_ajax" style="display: none">
 	HASIL DI SINI
-</div>
+	<h2>Output:</h2>
+</div>-->
+
+	<div data-role="popup" id="try_ajax" data-dismissible="false" style="max-width:400px;">
+	<div data-role="header">	
+		<h3>Hasil</h3>
+		<!--panggil popup -->
+	</div> 
+	
+	<div role="main" class="ui-content">
+		<div id="ubah">	
+			<!--panggil ubah -->
+		</div> 		
+	<a href="#" class="ui-btn ui-corner-all ui-shadow" data-rel="back">Kembali</a>
+	</div>
 
 </form>
 
