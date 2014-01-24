@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Mobile Form</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link href="css/jquery.mobile.min.css" rel="stylesheet" type="text/css">
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.mobile.min.js"></script>
+<script> 
+  $( document ).bind("pageinit",function() { //Utk mobile
+  //Pengiraan menggunakan ajax
+    $('#hantar').click(function(){
+
+	});
+  });
+ 
+</script>
+<script src="js/jquery.min.js"></script>
+
+</head>
+
+<body>
+
+<!--Step 1 aka Page 1 -->
+<div data-role="page" id="page1">
+	<!--header -->
+  <div data-role="header" data-position="fixed">
+	<h3>Staf</h3>
+	
+  </div>
+  
+  <!--content -->
+  <div role="main" class="ui-content">
+
+<form id="form1">
+	<div data-role="ui-field-contain">
+		<label>No. Gaji :</label>
+		<input type="number" name="name" id="name" class="">
+	</div>
+	<div data-role="ui-field-contain">
+		<label>Nama :</label>
+		<input type="text" name="name" id="name" class="">
+	</div>
+	<div data-role="ui-field-contain">
+	<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+		<legend>Jantina:</legend>
+			<input type="radio" name="rbSex" id="rbL" value="L" checked="checked">
+			<label for="rbL">Lelaki</label>
+			<input type="radio" name="rbSex" id="rbP" value="P">
+			<label for="rbP">Perempuan</label>
+	</fieldset>
+	</div>
+	<div data-role="ui-field-contain">
+	<label for="date">Tarikh Lahir:</label>
+	<input type="date" name="tkhlahir" id="date" value="">
+	</div>
+	<div data-role="ui-field-contain">
+	<fieldset data-role="controlgroup">
+    <legend>Sektor:</legend>
+        <input type="radio" name="rbSektor" id="rbPendidikan" value="rbPendidikan" checked="checked">
+        <label for="rbPendidikan">Pendidikan</label>
+        <input type="radio" name="rbSektor" id="rbUsahawan" value="rbUsahawan">
+        <label for="rbUsahawan">Usahawan</label>
+        <input type="radio" name="rbSektor" id="rbInvestment" value="rbInvestment">
+        <label for="rbInvestment">Pelaburan</label>
+        <input type="radio" name="rbSektor" id="rbKP" value="rbKP">
+        <label for="rbKP">Khidmat Pengurusan</label>
+	</fieldset>
+	</div>
+	<div data-role="ui-field-contain">
+	<label for="selBhgn" class="select">Bahagian:</label>
+	<select name="bahagian" id="selBhgn" data-native-menu="false">
+		<option>Pilih Bahagian</option>
+		<option value="BTM">Teknologi Maklumat</option>
+		<option value="BPP">Penganjuran</option>
+		<option value="BKK">Kawalan Kredit</option>
+		<option value="BKW">Kewangan</option>
+	</select>
+	</div>
+	
+	<label for="skill">Skill:</label>
+	<textarea cols="40" rows="8" name="textarea" id="skill"></textarea>
+	
+	<!--<input type="button" id="hantar" name="hantar" value="Kira" class="ui-btn">-->
+
+<div id="try_ajax" style="display: none">
+	HASIL DI SINI
+</div>
+
+</form>
+
+
+</div>
+
+  <!--footer -->
+  <div data-role="footer" data-position="fixed">
+    <h3>Bhgn Sumber Manusia</h3>
+  </div>
+
+</body>
+</html>
+
